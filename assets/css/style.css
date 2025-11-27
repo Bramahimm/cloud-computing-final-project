@@ -1,0 +1,86 @@
+/* FILE: assets/css/style.css */
+
+/* Custom styling for a modern, clean look */
+:root {
+    --primary-color: #0d6efd; /* Bootstrap primary blue */
+    --secondary-bg: #f8f9fa; /* Light grey */
+}
+
+/* Base body styles */
+body {
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Card UI Enhancements */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Clock/Status Card */
+#server-clock-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+}
+#server-clock {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Absen Button Styling */
+.btn-absen {
+    font-size: 1.25rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-absen:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Admin Sidebar (Small screen fix) */
+.admin-sidebar {
+    background-color: var(--bs-tertiary-bg);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+@media (min-width: 992px) {
+    .admin-sidebar {
+        min-height: 80vh;
+    }
+}
+
+/* Dark Mode Overrides */
+[data-bs-theme="dark"] {
+    --secondary-bg: #212529; /* Darker grey */
+}
+
+[data-bs-theme="dark"] .card {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+[data-bs-theme="dark"] .card:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .navbar {
+    border-bottom: 1px solid #343a40;
+}
