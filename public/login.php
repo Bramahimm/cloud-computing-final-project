@@ -70,6 +70,9 @@ require_once __DIR__ . '/../views/header.php';
           <input type="password" class="form-control" id="password" name="password" required>
         </div>
         <button type="submit" class="btn btn-primary w-100 mt-2">Masuk</button>
+        <!-- Bagian di public/login.php yang diubah -->
+        <hr>
+        <p class="text-center mb-0">Belum punya akun? <a href="register.php" class="text-success">Daftar di sini</a></p>
       </form>
     </div>
   </div>
